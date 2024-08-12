@@ -1,0 +1,35 @@
+Requirements
+1. Toast Notification Service which listens to active toasts and displays them on the screen
+2. Start with fixed position
+3. Should support JSX and text
+4. Styling 
+  4.1 None need
+5. Make sure that it can be called from anywhere
+6. Configurable Timeout
+7. Clear button 
+8. Visibility -> Stack
+9. File naming -> Yes
+
+Architecture
+<ToastProvider> (OK)
+  <ToastConsumer />
+  // Rest of the app
+</ToastProvider>
+
+
+Data Model
+'message' 'timeout' 
+'position' 'variant' -> Optimizations
+
+Interface
+ToastContext
+useToast() -> alert(); dismiss(); toasts[{
+  message: JSX.Element | string;
+  timeout?: number // in ms
+}]
+
+
+Optimizations
+1. Positioning
+2. Styling (error, success,etc)
+3. Animations
